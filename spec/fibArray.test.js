@@ -17,13 +17,15 @@ describe('generateFirstNArrayOfFibs', () => {
     expect(generateFirstNArrayOfFibs(4)).toEqual([1, 1, 2, 3]);
   });
 
-  it('throws an error if n is a string', () => {
+  describe('throws an error', () => {
     const error = 'Input must be a positive integer > 0!';
-    expect(() => generateFirstNArrayOfFibs('String')).toThrow(error);
-  });
+    
+    it('if n is a string', () => {
+      expect(() => generateFirstNArrayOfFibs('String')).toThrow(error);
+    });
 
-  it('throws an error if n is a number < 1', () => {
-    const error = 'Input must be a positive integer > 0!';
-    expect(() => generateFirstNArrayOfFibs(-1.5)).toThrow(error);
+    it('if n is a number < 1', () => {
+      expect(() => generateFirstNArrayOfFibs(-1.5)).toThrow(error);
+    });
   });
 });
