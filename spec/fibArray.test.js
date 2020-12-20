@@ -12,4 +12,8 @@ describe('generateFirstNArrayOfFibs', () => {
   it('returns [1, 1, 2] for n = 3', () => {
     expect(generateFirstNArrayOfFibs(3)).toEqual([1, 1, 2]);
   });
+
+  it('returns [1, 1, 2, 3] for n = 4', () => {
+    expect(generateFirstNArrayOfFibs(4)).toEqual([1, 1, 2, 3]);
+  });
 });
