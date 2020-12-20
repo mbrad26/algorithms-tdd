@@ -16,4 +16,9 @@ describe('generateFirstNArrayOfFibs', () => {
   it('returns [1, 1, 2, 3] for n = 4', () => {
     expect(generateFirstNArrayOfFibs(4)).toEqual([1, 1, 2, 3]);
   });
+
+  it('throws an error i n is a string', () => {
+    const error = 'Input must not be a String!';
+    expect(() => generateFirstNArrayOfFibs('String')).toThrow(error);
+  });
 });
